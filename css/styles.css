@@ -502,13 +502,13 @@ margin-right: 10px;
     background-color: var(--bg-color);
     height: 252px;
 }
- .footer.contacts-blocks,
+ .footer .contacts-blocks,
  .footer .portfolio-container-footer {
-     display: inline-flex;
+     display: flex;
  }
   
 .portfolio-container-footer .footer-portfolio,
-.container .footer-studio {
+.contacts-blocks .footer-studio {
    padding-top: 60px;
    height: 252px;
 }
@@ -586,12 +586,15 @@ margin-right: 10px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-name-color);
     margin-bottom: 20px;
 }
-.footer-portfolio-social-icons-item,
+.footer-portfolio-social-icons-item:not(:last-child){
+    margin-right: 10px;
+    }
 .footer-social-icons-item:not(:last-child){
 margin-right: 10px;
 }
