@@ -62,6 +62,35 @@ img {
     height: auto;
 }
 
+.social-icons {
+    display: inline-flex;
+}
+
+.social-icons-item + .social-icons-item {
+    margin-left: 10px;
+}
+.social-icons-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 44px;
+height: 44px;
+border-radius:50%; 
+background-color: #FFFFFF;
+padding-bottom: 30px;
+}
+
+.social-icons .icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon {
+    fill: var(--title-name-color);
+    background-color:var(--accent-color);
+}
+
 .page {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
@@ -71,6 +100,7 @@ img {
     color: var(--primary-text-color);
     background-color:var(--title-name-color);
 }
+
 
 .header,
 .page header {
@@ -330,7 +360,7 @@ height: 100%;
         line-height: 1.2;
         letter-spacing: 0.03em; 
         margin-right: auto;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
         margin-left: auto;
         text-align: center;
         width: 147px;
