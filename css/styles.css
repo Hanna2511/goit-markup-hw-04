@@ -226,6 +226,15 @@ height: 100%;
  .menu-item:not(:last-child) {
      margin-right: 50px;
  }
+
+ .menu-link {
+    display: flex;
+    align-items: center;
+ }
+ .menu-item:hover .icon,
+ .menu-item:focus .icon {
+    fill: var(--accent-color);
+ }
 .icon-Vector .icon,
 .icon-envelopehsvg .icon{
 margin-right: 10px;
@@ -427,13 +436,15 @@ margin-right: 10px;
         border-radius: 4px;
     }
 
-    .icon :hover,
-    .icon :focus,
+
     .clients-link:hover,
     .clients-link:focus {
-        fill: var(--accent-color);
         background-color:var(--title-name-color);   
         border: 1px solid #2196F3;
+    }
+    .clients-link:hover .icon,
+    .clients-link:focus .icon{
+        fill: var(--accent-color);
     }
     .clients-list  {
         display: flex;
@@ -500,18 +511,13 @@ margin-right: 10px;
     margin-right: auto; 
     margin-left: auto;
     background-color: var(--bg-color);
-    height: 252px;
+    padding-top: 60px;
 }
  .footer .contacts-blocks,
  .footer .portfolio-container-footer {
      display: flex;
  }
   
-.portfolio-container-footer .footer-portfolio,
-.contacts-blocks .footer-studio {
-   padding-top: 60px;
-   height: 252px;
-}
 .footer-studio .logo,
 .footer-portfolio .logo {
     display: block;
@@ -576,8 +582,7 @@ margin-right: 10px;
 .footer-social-list,
 .footer-portfolio-social-list {
     display: inline-block;
-    flex-basis: calc((50% - 45px) / 2); 
-    padding-top: 60px;  
+    flex-basis: calc((50% - 45px) / 2);  
     margin-left: 70px; 
 }
 
@@ -674,6 +679,10 @@ flex-wrap: wrap;
     margin-bottom: 30px;
     border: 1px solid var(--prog-color);
 }
+.projects-foto:hover,
+.projects-foto:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .projects-foto:nth-child(3n) {
     margin-right: 0;
 }
@@ -702,14 +711,17 @@ flex-wrap: wrap;
     min-width: 73px;
     text-decoration: none;
     border: whitesmoke;
+    cursor: pointer;
     }
     
-.button:hover,
+
 .knob:hover {
     color:var(--title-name-color);
     background-color: var(--accent-color);
 }
-.button.secondary {
+.button:hover,
+.button:focus {
     color:var(--title-name-color);
     background-color:var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
